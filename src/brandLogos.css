@@ -1,0 +1,8 @@
+.sidebar .brand-logo{display:block;width:100%;max-width:185px;line-height:0}
+.sidebar .brand-logo img{display:block;width:100%;height:48px;object-fit:contain;object-position:left center}
+.sidebar .sidebar-footer{display:block}
+.sidebar .footer-logo{display:block;width:175px;max-width:100%;height:54px;object-fit:contain;object-position:left center}
+.sidebar .sidebar-footer small{display:block;margin-top:8px}
+.login-bank-logo{display:block;width:min(330px,100%);height:110px;object-fit:contain;object-position:left center}
+.login-panel-logo{display:block;width:178px;height:48px;object-fit:contain;object-position:left center}
+@media(max-width:900px){.sidebar .brand-logo{width:32px}.sidebar .brand-logo img{width:32px;height:32px;object-position:center}.sidebar .sidebar-footer{display:none}}

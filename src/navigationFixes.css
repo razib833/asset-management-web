@@ -1,0 +1,20 @@
+/* Keep the desktop navigation fixed; only the application content scrolls. */
+@media (min-width:901px) {
+  .sidebar { position:sticky; top:0; height:100vh; min-height:0; overflow:hidden; padding:0 12px; display:flex; flex-direction:column; }
+  .sidebar .brand { flex:0 0 52px; height:52px; margin:0 -12px; padding:0 16px; }
+  .sidebar .brand .bank-logo { width:30px; height:30px; font-size:17px; }
+  .sidebar .brand strong { font-size:15px; }
+  .sidebar nav { flex:0 0 auto; margin-top:8px; gap:0; }
+  .sidebar .nav-link { min-height:31px; padding:6px 9px; font-size:10px; }
+  .sidebar .nav-divider { margin:6px 0; }
+  .sidebar .nav-caption { margin:2px 9px 3px; }
+  .sidebar .help-card { position:static; flex:0 0 auto; margin:8px 0; padding:9px 10px; }
+  .sidebar .help-card p { margin-top:4px; }
+  .sidebar .sidebar-footer { position:static; flex:0 0 96px; min-height:96px; height:96px; margin:auto -12px 0; padding:13px 16px; }
+  .sidebar .sidebar-footer .bank-logo { width:30px; height:30px; }
+  .sidebar .sidebar-footer small { margin-top:8px; }
+}
+@media (max-height:680px) and (min-width:901px) {
+  .sidebar .help-card { display:none; }
+  .sidebar .sidebar-footer { margin-top:auto; min-height:64px; height:64px; flex-basis:64px; }
+}

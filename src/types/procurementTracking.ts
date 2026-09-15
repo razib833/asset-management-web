@@ -1,0 +1,9 @@
+export interface ProcurementTrackingRow{procurementId:number;requisitionId:number;requisitionNo:string;requestedOrgUnitId:number;orgUnitName:string;assets:string;requisitionTypes:string;totalEstimatedAmount:number;statusCode:string;statusName:string;referenceNo:string|null;modifiedDate:string}
+export interface ProcurementStatus{code:string;name:string;displayOrder:number}
+export interface ProcurementStatusHistory{id:number;statusCode:string;statusName:string;statusDate:string;referenceNo:string|null;changedByEmployeeId:string;remarks:string|null;batchReferenceId:string|null}
+export interface ProcurementTrackingDetail{procurementId:number;requisitionId:number;requisitionNo:string;orgUnitName:string;statusCode:string;statusName:string;referenceNo:string|null;remarks:string|null;history:ProcurementStatusHistory[]}
+export interface BatchItemResult{requisitionId:number;requisitionNo:string|null;resultCode:string;resultMessage:string;newStatusCode?:string|null}
+export interface StatusBatchResult{batchReferenceId:string;totalSelected:number;successfulCount:number;failedCount:number;results:BatchItemResult[]}
+export interface WorkOrderBatchResult{batchReferenceId:string;workOrderId:number|null;workOrderNo:string|null;totalSelected:number;successfulCount:number;failedCount:number;results:BatchItemResult[]}
+export interface StatusUpdateRequest{requisitionIds:number[];newStatusCode:string;statusDate:string;referenceNo?:string;remarks?:string}
+export interface WorkOrderRequest{requisitionIds:number[];workOrderNo:string;workOrderDate:string;supplierVendor:string;contractAgreementNo?:string;workOrderValue:number;deliveryDate?:string;remarks?:string}

@@ -1,0 +1,1 @@
+const baseUrl=import.meta.env.VITE_API_BASE_URL?.replace(/\/$/,'');if(!baseUrl)throw new Error('VITE_API_BASE_URL is required.');const timeout=Number(import.meta.env.VITE_API_TIMEOUT_MS??30000);if(!Number.isFinite(timeout)||timeout<=0)throw new Error('VITE_API_TIMEOUT_MS must be positive.');export const env={apiBaseUrl:baseUrl,apiTimeoutMs:timeout}as const;

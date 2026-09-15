@@ -1,0 +1,1 @@
+import type{RoleCode}from'../types';export const AUTH_STORAGE_KEY='jbp.auth';export const AUTH_INVALIDATED_EVENT='jbp:auth-invalidated';export const ALL_ROLES:RoleCode[]=['MAKER','MANAGER','PROCUREMENT_OFFICER','PROCUREMENT_AUTHORITY','CONCERN_OFFICIAL','CONCERN_AUTHORITY','PROCUREMENT_TRACKER','ADMIN'];
