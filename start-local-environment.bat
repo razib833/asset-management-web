@@ -55,11 +55,11 @@ if not exist "%FRONTEND_DIR%node_modules" call npm --prefix "%FRONTEND_DIR%" ins
 if errorlevel 1 (echo ERROR: npm install failed.& exit /b 1)
 
 echo [4/7] Applying idempotent Asset and Division Setup stored procedures...
-sqlcmd -S localhost -E -C -No -d JamunaBankProcurement -i "%ASSET_DATABASE_SCRIPT%" -b
+sqlcmd -S localhost -E -C -No -I -d JamunaBankProcurement -i "%ASSET_DATABASE_SCRIPT%" -b
 if errorlevel 1 (echo ERROR: Asset stored procedures could not be applied.& goto :failed)
 sqlcmd -S localhost -E -C -No -d JamunaBankProcurement -i "%ASSET_SPEC_DATABASE_SCRIPT%" -b
 if errorlevel 1 (echo ERROR: Asset specification stored procedures could not be applied.& goto :failed)
-sqlcmd -S localhost -E -C -No -d JamunaBankProcurement -i "%ASSET_OFFICER_DATABASE_SCRIPT%" -b
+sqlcmd -S localhost -E -C -No -I -d JamunaBankProcurement -i "%ASSET_OFFICER_DATABASE_SCRIPT%" -b
 if errorlevel 1 (echo ERROR: Procurement Officer mapping stored procedures could not be applied.& goto :failed)
 sqlcmd -S localhost -E -C -No -d JamunaBankProcurement -i "%DIVISION_DATABASE_SCRIPT%" -b
 if errorlevel 1 (echo ERROR: Division Setup stored procedures could not be applied.& goto :failed)
